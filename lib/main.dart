@@ -4,6 +4,8 @@ import 'design/maindesign.dart';
 import 'forms/mainforms.dart';
 import 'gestures/maingestures.dart';
 import 'images/mainimages.dart';
+import 'listdemo/mainlist.dart';
+import 'navigation/mainnavigation.dart';
 
 void main() => runApp(MainMenu());
 
@@ -21,6 +23,8 @@ class MainMenuState extends State<MainMenu> {
     "Forms",
     "Gestures",
     "Images",
+    "List",
+    "Navigation",
   ];
 
   void onMenuTab(int index, BuildContext context) {
@@ -40,6 +44,12 @@ class MainMenuState extends State<MainMenu> {
         break;
       case 4:
         navigateWidget = MainImagesMenu();
+        break;
+      case 5:
+        navigateWidget = MainListMenu();
+        break;
+      case 6:
+        navigateWidget = MainNavigationMenu();
         break;
     }
     if (navigateWidget != null) {

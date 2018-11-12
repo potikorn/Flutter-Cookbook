@@ -12,7 +12,7 @@ class MainImagesMenu extends StatelessWidget {
     'Fade in images with a placeholder',
     'Working with cached images',
   ];
-  final title = "Design";
+  final title = "Images";
 
   void onTapMenu(BuildContext context, int index) {
     print(index);
