@@ -9,6 +9,8 @@ import 'navigation/mainnavigation.dart';
 import 'networking/main_networking.dart';
 import 'persistence/main_persistence.dart';
 
+import 'model/menu_model.dart';
+
 void main() => runApp(MainMenu());
 
 class MainMenu extends StatefulWidget {
@@ -19,16 +21,16 @@ class MainMenu extends StatefulWidget {
 }
 
 class MainMenuState extends State<MainMenu> {
-  final List<String> _menu = [
-    "Animation",
-    "Design",
-    "Forms",
-    "Gestures",
-    "Images",
-    "List",
-    "Navigation",
-    "Networking",
-    "Persistence",
+  final List<MenuModel> _menu = [
+    MenuModel("Animation", "movement.jpg"),
+    MenuModel("Design", "movement.jpg"),
+    MenuModel("Forms", "movement.jpg"),
+    MenuModel("Gestures", "movement.jpg"),
+    MenuModel("Images", "movement.jpg"),
+    MenuModel("List", "movement.jpg"),
+    MenuModel("Navigation", "movement.jpg"),
+    MenuModel("Networking", "movement.jpg"),
+    MenuModel("Persistence", "movement.jpg"),
   ];
 
   void onMenuTab(int index, BuildContext context) {
@@ -93,12 +95,31 @@ class MainMenuState extends State<MainMenu> {
     );
   }
 
-  Widget _buildMenu(BuildContext context, String menu, int index) {
+  Widget _buildMenu(BuildContext context, MenuModel menuModel, int index) {
     return GestureDetector(
       onTap: () => onMenuTab(index, context),
       child: Card(
-        child: Center(
-          child: Text(menu),
+        child: Stack(
+          children: <Widget>[
+            // Container(
+            //   decoration: new BoxDecoration(
+            //     image: new DecorationImage(
+            //       colorFilter: ColorFilter.mode(
+            //           Colors.black.withOpacity(0.5), BlendMode.multiply),
+            //       image: AssetImage("images/menu/${menuModel.pix}"),
+            //       fit: BoxFit.cover,
+            //     ),
+            //   ),
+            // ),
+            Center(
+              child: Text(
+                menuModel.menuName,
+                style: Theme.of(context).textTheme.title.copyWith(
+                  // color: Colors.white
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );
