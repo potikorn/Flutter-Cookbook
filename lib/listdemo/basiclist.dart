@@ -7,9 +7,7 @@ class BasicListDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     final title = 'Basic List';
 
-    return MaterialApp(
-      title: title,
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text(title),
         ),
@@ -29,7 +27,6 @@ class BasicListDemo extends StatelessWidget {
             ),
           ],
         ),
-      ),
     );
   }
 }

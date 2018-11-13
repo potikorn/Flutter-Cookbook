@@ -9,7 +9,7 @@ import 'longlist.dart';
 void main() => runApp(MainListMenu());
 
 class MainListMenu extends StatelessWidget {
-  final _simpleMenu = [
+  final _listMenu = [
     'Basic List',
     'Create a horizontal list',
     'Creating a Grid List',
@@ -45,16 +45,11 @@ class MainListMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: title,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
       ),
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text(title),
-          ),
-          body: SimpleList(list: _simpleMenu, onTapAction: onTapMenu)),
+      body: SimpleList(list: _listMenu, onTapAction: onTapMenu),
     );
   }
 }

@@ -4,11 +4,12 @@ import 'styletextfield.dart';
 import 'focustextfield.dart';
 import 'handletextchange.dart';
 import 'retrievevalue.dart';
+import '../simplelist.dart';
 
 void main() => runApp(MainFormMenu());
 
 class MainFormMenu extends StatelessWidget {
-  final _designMenu = [
+  final _formMenu = [
     'Building a form with validation',
     'Create and style a text field',
     'Focus on a Text Field',
@@ -44,34 +45,11 @@ class MainFormMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: title,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: ListView.builder(
-          padding: EdgeInsets.all(16.0),
-          itemCount: _designMenu.length,
-          itemBuilder: (BuildContext context, int index) {
-            return GestureDetector(
-              onTap: () => onTapMenu(context, index),
-              child: Card(
-                child: Container(
-                  padding: EdgeInsets.only(
-                      top: 24.0, right: 16.0, bottom: 24.0, left: 16.0),
-                  child: Center(
-                    child: Text(_designMenu[index]),
-                  ),
-                ),
-              ),
-            );
-          },
-        ),
-      ),
+      body: SimpleList(list: _formMenu, onTapAction: onTapMenu),
     );
   }
 }

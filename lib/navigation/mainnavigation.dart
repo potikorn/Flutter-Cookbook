@@ -7,7 +7,7 @@ import 'returning_data.dart';
 import 'send_data_to_new_screen.dart';
 
 class MainNavigationMenu extends StatelessWidget {
-  final _simpleMenu = [
+  final _navigationMenu = [
     'Animating a Widget across screens',
     'Navigate to a new screen and back',
     'Navigate with named routes',
@@ -47,7 +47,7 @@ class MainNavigationMenu extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: SimpleList(list: _simpleMenu, onTapAction: onTapMenu),
+      body: SimpleList(list: _navigationMenu, onTapAction: onTapMenu),
     );
   }
 }

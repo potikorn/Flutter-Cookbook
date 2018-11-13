@@ -7,10 +7,7 @@ class HandleTapsDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     final title = 'Gesture Demo';
 
-    return MaterialApp(
-      title: title,
-      home: _MyHomePage(title: title),
-    );
+    return _MyHomePage(title: title);
   }
 }
 

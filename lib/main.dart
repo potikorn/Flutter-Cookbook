@@ -35,7 +35,7 @@ class MainMenuState extends State<MainMenu> {
     Widget navigateWidget;
     switch (index) {
       case 0:
-        navigateWidget = OpacityDemo();
+        navigateWidget = FadeInFadeOutAnimation();
         break;
       case 1:
         navigateWidget = MainDesignMenu();

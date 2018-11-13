@@ -7,7 +7,7 @@ import 'cachedimage.dart';
 void main() => runApp(MainImagesMenu());
 
 class MainImagesMenu extends StatelessWidget {
-  final _simpleMenu = [
+  final _imageMenu = [
     'Adding Material Touch Ripples',
     'Fade in images with a placeholder',
     'Working with cached images',
@@ -35,17 +35,11 @@ class MainImagesMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: title,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: SimpleList(list: _simpleMenu, onTapAction: onTapMenu)
-      ),
+      body: SimpleList(list: _imageMenu, onTapAction: onTapMenu),
     );
   }
 }

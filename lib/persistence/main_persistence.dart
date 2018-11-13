@@ -19,12 +19,6 @@ class MainPersistenceMenu extends StatelessWidget {
       case 1:
         navigatorWidget = StoreDataOnDiskDemo();
         break;
-      // case 2:
-      //   navigatorWidget = ParsingInBackgroundDemo();
-      //   break;
-      // case 3:
-      //   navigatorWidget = WebSocketDemo();
-      //   break;
     }
     if (navigatorWidget != null) {
       Navigator.push(

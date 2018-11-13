@@ -1,22 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(OpacityDemo());
-
-class OpacityDemo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final appTitle = 'Opacity Demo';
-    return MaterialApp(
-      title: appTitle,
-      home: FadeInFadeOutAnimation(title: appTitle),
-    );
-  }
-}
-
 class FadeInFadeOutAnimation extends StatefulWidget {
-  final String title;
-  FadeInFadeOutAnimation({Key key, this.title}) : super(key: key);
-
   @override
   _FadeInFadeOutState createState() => _FadeInFadeOutState();
 }
@@ -28,7 +12,7 @@ class _FadeInFadeOutState extends State<FadeInFadeOutAnimation> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Opacity Demo'),
       ),
       body: Center(
         child: AnimatedOpacity(

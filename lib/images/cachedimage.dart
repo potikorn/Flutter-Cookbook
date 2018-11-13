@@ -8,18 +8,15 @@ class CachedImageDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     final title = 'Cached Images';
 
-    return MaterialApp(
-      title: title,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: Center(
-          child: CachedNetworkImage(
-            placeholder: CircularProgressIndicator(),
-            imageUrl:
-                'https://github.com/flutter/website/blob/master/src/_includes/code/layout/lakes/images/lake.jpg?raw=true',
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: CachedNetworkImage(
+          placeholder: CircularProgressIndicator(),
+          imageUrl:
+              'https://github.com/flutter/website/blob/master/src/_includes/code/layout/lakes/images/lake.jpg?raw=true',
         ),
       ),
     );

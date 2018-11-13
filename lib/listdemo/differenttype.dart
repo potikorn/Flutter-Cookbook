@@ -17,31 +17,29 @@ class DifferentTypeDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final title = 'Mixed List';
-    return MaterialApp(
-        title: title,
-        home: Scaffold(
-          appBar: AppBar(
-            title: Text(title),
-          ),
-          body: ListView.builder(
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              final item = items[index];
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          final item = items[index];
 
-              if (item is _HeadingItem) {
-                return ListTile(
-                  title: Text(item.heading,
-                      style: Theme.of(context).textTheme.headline),
-                );
-              } else if (item is _MessageItem) {
-                return ListTile(
-                  title: Text(item.sender),
-                  subtitle: Text(item.body),
-                );
-              }
-            },
-          ),
-        ));
+          if (item is _HeadingItem) {
+            return ListTile(
+              title: Text(item.heading,
+                  style: Theme.of(context).textTheme.headline),
+            );
+          } else if (item is _MessageItem) {
+            return ListTile(
+              title: Text(item.sender),
+              subtitle: Text(item.body),
+            );
+          }
+        },
+      ),
+    );
   }
 }
 

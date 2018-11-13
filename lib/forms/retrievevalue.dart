@@ -5,10 +5,7 @@ void main() => runApp(RetrieveValueDemo());
 class RetrieveValueDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Retrieve Text Input",
-      home: _MyCustomFrom(),
-    );
+    return _MyCustomFrom();
   }
 }
 

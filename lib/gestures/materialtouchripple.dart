@@ -6,12 +6,7 @@ class MaterialTouchRipple extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final title = 'InkWell Demo';
-    return MaterialApp(
-      title: title,
-      home: _MyHomePage(
-        title: title,
-      ),
-    );
+    return _MyHomePage(title: title);
   }
 }
 

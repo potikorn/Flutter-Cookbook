@@ -6,7 +6,7 @@ import 'parsing_in_background.dart';
 import 'websocket_page.dart';
 
 class MainNetworkingMenu extends StatelessWidget {
-  final _simpleMenu = [
+  final _networkingMenu = [
     'Fetch data from the internet',
     'Making authenticated requests',
     'Parsing JSON in the background',
@@ -42,7 +42,7 @@ class MainNetworkingMenu extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: SimpleList(list: _simpleMenu, onTapAction: onTapMenu),
+      body: SimpleList(list: _networkingMenu, onTapAction: onTapMenu),
     );
   }
 }

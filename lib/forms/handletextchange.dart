@@ -5,10 +5,7 @@ void main() => runApp(HandleTextChangedDemo());
 class HandleTextChangedDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Retrieve Text Input',
-      home: _MyCustomForm(),
-    );
+    return _MyCustomForm();
   }
 }
 

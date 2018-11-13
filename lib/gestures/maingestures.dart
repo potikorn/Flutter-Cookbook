@@ -7,7 +7,7 @@ import 'swipetodismiss.dart';
 void main() => runApp(MainGesturesMenu());
 
 class MainGesturesMenu extends StatelessWidget {
-  final _simpleMenu = [
+  final _gesturesMenu = [
     'Adding Material Touch Ripples',
     'Handling Taps',
     'Implement Swipe to Dismiss',
@@ -36,17 +36,11 @@ class MainGesturesMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: title,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: SimpleList(list: _simpleMenu, onTapAction: onTapMenu)
-      ),
+      body: SimpleList(list: _gesturesMenu, onTapAction: onTapMenu),
     );
   }
 }

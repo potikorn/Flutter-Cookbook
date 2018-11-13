@@ -5,11 +5,7 @@ void main() => runApp(FocusTextFieldDemo());
 class FocusTextFieldDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final String title = "Text Field Focus";
-    return MaterialApp(
-      title: title,
-      home: _MyCustomForm(),
-    );
+    return _MyCustomForm();
   }
 }
 
