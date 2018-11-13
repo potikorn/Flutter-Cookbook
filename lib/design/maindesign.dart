@@ -18,7 +18,6 @@ class MainDesignMenu extends StatelessWidget {
   final title = "Design";
 
   void onTapMenu(BuildContext context, int index) {
-    print(index);
     Widget navigatorWidget;
     switch (index) {
       case 0:

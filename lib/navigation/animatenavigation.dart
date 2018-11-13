@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(AnimateNavigationDemo());
-}
-
 class AnimateNavigationDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Transition Demo',
-      home: MainScreen(),
-    );
+    return MainScreen();
   }
 }
 

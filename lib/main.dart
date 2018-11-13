@@ -6,6 +6,7 @@ import 'gestures/maingestures.dart';
 import 'images/mainimages.dart';
 import 'listdemo/mainlist.dart';
 import 'navigation/mainnavigation.dart';
+import 'networking/main_networking.dart';
 
 void main() => runApp(MainMenu());
 
@@ -25,6 +26,7 @@ class MainMenuState extends State<MainMenu> {
     "Images",
     "List",
     "Navigation",
+    "Networking",
   ];
 
   void onMenuTab(int index, BuildContext context) {
@@ -50,6 +52,9 @@ class MainMenuState extends State<MainMenu> {
         break;
       case 6:
         navigateWidget = MainNavigationMenu();
+        break;
+      case 7:
+        navigateWidget = MainNetworkingMenu();
         break;
     }
     if (navigateWidget != null) {

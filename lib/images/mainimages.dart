@@ -15,7 +15,6 @@ class MainImagesMenu extends StatelessWidget {
   final title = "Images";
 
   void onTapMenu(BuildContext context, int index) {
-    print(index);
     Widget navigatorWidget;
     switch (index) {
       case 0:
