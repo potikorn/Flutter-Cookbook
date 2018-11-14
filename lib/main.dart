@@ -22,15 +22,15 @@ class MainMenu extends StatefulWidget {
 
 class MainMenuState extends State<MainMenu> {
   final List<MenuModel> _menu = [
-    MenuModel("Animation", "movement.jpg"),
-    MenuModel("Design", "movement.jpg"),
-    MenuModel("Forms", "movement.jpg"),
-    MenuModel("Gestures", "movement.jpg"),
-    MenuModel("Images", "movement.jpg"),
-    MenuModel("List", "movement.jpg"),
-    MenuModel("Navigation", "movement.jpg"),
-    MenuModel("Networking", "movement.jpg"),
-    MenuModel("Persistence", "movement.jpg"),
+    MenuModel("Animation", "movement.jpeg"),
+    MenuModel("Design", "design.jpeg"),
+    MenuModel("Forms", "form.jpeg"),
+    MenuModel("Gestures", "gesture.jpeg"),
+    MenuModel("Images", "image.jpeg"),
+    MenuModel("List", "list.jpeg"),
+    MenuModel("Navigation", "navigation.jpeg"),
+    MenuModel("Networking", "networking.jpeg"),
+    MenuModel("Persistence", "persistence.jpeg"),
   ];
 
   void onMenuTab(int index, BuildContext context) {
@@ -79,19 +79,23 @@ class MainMenuState extends State<MainMenu> {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: GridView.builder(
-          itemCount: _menu.length,
-          padding: EdgeInsets.all(8.0),
-          itemBuilder: (BuildContext context, int index) {
-            return _buildMenu(context, _menu[index], index);
-          },
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        ),
-      ),
+          appBar: AppBar(
+            title: Text(title),
+          ),
+          body: OrientationBuilder(
+            builder: (context, orientation) {
+              return GridView.builder(
+                itemCount: _menu.length,
+                padding: EdgeInsets.all(8.0),
+                itemBuilder: (BuildContext context, int index) {
+                  return _buildMenu(context, _menu[index], index);
+                },
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount:
+                        (orientation == Orientation.portrait) ? 2 : 3),
+              );
+            },
+          )),
     );
   }
 
@@ -101,22 +105,23 @@ class MainMenuState extends State<MainMenu> {
       child: Card(
         child: Stack(
           children: <Widget>[
-            // Container(
-            //   decoration: new BoxDecoration(
-            //     image: new DecorationImage(
-            //       colorFilter: ColorFilter.mode(
-            //           Colors.black.withOpacity(0.5), BlendMode.multiply),
-            //       image: AssetImage("images/menu/${menuModel.pix}"),
-            //       fit: BoxFit.cover,
-            //     ),
-            //   ),
-            // ),
+            Container(
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(0.5), BlendMode.multiply),
+                  image: AssetImage("images/menu/${menuModel.pix}"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
             Center(
               child: Text(
                 menuModel.menuName,
-                style: Theme.of(context).textTheme.title.copyWith(
-                  // color: Colors.white
-                ),
+                style: Theme.of(context)
+                    .textTheme
+                    .title
+                    .copyWith(color: Colors.white),
               ),
             )
           ],
