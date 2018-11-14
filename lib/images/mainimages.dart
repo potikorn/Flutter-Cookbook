@@ -8,7 +8,7 @@ void main() => runApp(MainImagesMenu());
 
 class MainImagesMenu extends StatelessWidget {
   final _imageMenu = [
-    'Adding Material Touch Ripples',
+    'Display images from the internet',
     'Fade in images with a placeholder',
     'Working with cached images',
   ];
