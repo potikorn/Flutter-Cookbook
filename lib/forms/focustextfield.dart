@@ -20,7 +20,6 @@ class __MyCustomFormState extends State<_MyCustomForm> {
   @override
   void initState() {
     super.initState();
-    
     myFocusNode = FocusNode();
   }
 
