@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(CachedImageDemo());
 
@@ -14,7 +14,7 @@ class CachedImageDemo extends StatelessWidget {
       ),
       body: Center(
         child: CachedNetworkImage(
-          placeholder: CircularProgressIndicator(),
+          placeholder: (context, url) => CircularProgressIndicator(),
           imageUrl:
               'https://github.com/flutter/website/blob/master/src/_includes/code/layout/lakes/images/lake.jpg?raw=true',
         ),
