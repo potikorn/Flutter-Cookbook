@@ -29,7 +29,7 @@ class DifferentTypeDemo extends StatelessWidget {
           if (item is _HeadingItem) {
             return ListTile(
               title: Text(item.heading,
-                  style: Theme.of(context).textTheme.headline),
+                  style: Theme.of(context).textTheme.headline5),
             );
           } else if (item is _MessageItem) {
             return ListTile(
@@ -37,6 +37,7 @@ class DifferentTypeDemo extends StatelessWidget {
               subtitle: Text(item.body),
             );
           }
+          return null;
         },
       ),
     );

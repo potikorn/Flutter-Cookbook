@@ -7,10 +7,10 @@ class ValidateFormDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     final appTitle = 'Form Validation Demo';
     return Scaffold(
-        appBar: AppBar(
-          title: Text(appTitle),
-        ),
-        body: CustomForm(),
+      appBar: AppBar(
+        title: Text(appTitle),
+      ),
+      body: CustomForm(),
     );
   }
 }
@@ -37,6 +37,7 @@ class _CustomFormState extends State<CustomForm> {
               if (value.isEmpty) {
                 return 'Please enter some text';
               }
+              return null;
             },
           ),
           Padding(

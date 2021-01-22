@@ -39,7 +39,7 @@ class _CustomTheme extends StatelessWidget {
           color: Theme.of(context).accentColor,
           child: Text(
             'Text with a background color',
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.headline6,
           ),
         ),
       ),

@@ -28,7 +28,7 @@ class OrientationList extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Try rotate your device!',
-                  style: Theme.of(context).textTheme.display1,
+                  style: Theme.of(context).textTheme.headline4,
                 ),
               ],
             ),
@@ -40,7 +40,7 @@ class OrientationList extends StatelessWidget {
                     return Center(
                       child: Text(
                         'Item $index',
-                        style: Theme.of(context).textTheme.headline,
+                        style: Theme.of(context).textTheme.headline5,
                       ),
                     );
                   }),

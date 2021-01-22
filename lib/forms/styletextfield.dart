@@ -13,9 +13,9 @@ class StyleTextFieldDemo extends StatelessWidget {
       body: Container(
         child: Column(
           children: <Widget>[
-            Text('Text Field', style: Theme.of(context).textTheme.title),
+            Text('Text Field', style: Theme.of(context).textTheme.headline6),
             TextField(),
-            Text('Text Form Field', style: Theme.of(context).textTheme.title),
+            Text('Text Form Field', style: Theme.of(context).textTheme.headline6),
             TextFormField(),
           ],
         ),

@@ -1,15 +1,15 @@
+import 'package:cookbook/animation/main_animation.dart';
 import 'package:flutter/material.dart';
-import 'animation/fadeInFadeOut.dart';
+
 import 'design/maindesign.dart';
 import 'forms/mainforms.dart';
 import 'gestures/maingestures.dart';
 import 'images/mainimages.dart';
 import 'listdemo/mainlist.dart';
+import 'model/menu_model.dart';
 import 'navigation/mainnavigation.dart';
 import 'networking/main_networking.dart';
 import 'persistence/main_persistence.dart';
-
-import 'model/menu_model.dart';
 
 void main() => runApp(MainMenu());
 
@@ -37,7 +37,7 @@ class MainMenuState extends State<MainMenu> {
     Widget navigateWidget;
     switch (index) {
       case 0:
-        navigateWidget = FadeInFadeOutAnimation();
+        navigateWidget = MainAnimationMenu();
         break;
       case 1:
         navigateWidget = MainDesignMenu();
@@ -120,7 +120,7 @@ class MainMenuState extends State<MainMenu> {
                 menuModel.menuName,
                 style: Theme.of(context)
                     .textTheme
-                    .title
+                    .headline6
                     .copyWith(color: Colors.white),
               ),
             )
