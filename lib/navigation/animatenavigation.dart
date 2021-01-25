@@ -18,7 +18,7 @@ class MainScreen extends StatelessWidget {
         child: Hero(
           tag: 'imageHero',
           child: Image.network(
-            'https://raw.githubusercontent.com/flutter/website/master/src/_includes/code/layout/lakes/images/lake.jpg',
+            'https://picsum.photos/250?image=9',
           ),
         ),
         onTap: () {
@@ -40,7 +40,7 @@ class DetailScreen extends StatelessWidget {
           child: Hero(
             tag: 'imageHero',
             child: Image.network(
-              'https://raw.githubusercontent.com/flutter/website/master/src/_includes/code/layout/lakes/images/lake.jpg',
+              'https://picsum.photos/250?image=9',
             ),
           ),
         ),

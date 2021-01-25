@@ -1,8 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:cookbook/simplelist.dart';
+import 'package:flutter/material.dart';
+
 import 'animatenavigation.dart';
-import 'navigatenewdemo.dart';
 import 'navigate_with_named_route.dart';
+import 'navigatenewdemo.dart';
+import 'pass_arguments.dart';
 import 'returning_data.dart';
 import 'send_data_to_new_screen.dart';
 
@@ -12,6 +14,7 @@ class MainNavigationMenu extends StatelessWidget {
     'Navigate to a new screen and back',
     'Navigate with named routes',
     'Return data from a screen',
+    'Pass arguments to a named route',
     'Send data to a new screen',
   ];
   final title = "Navigation";
@@ -32,6 +35,9 @@ class MainNavigationMenu extends StatelessWidget {
         navigatorWidget = ReturnDataDemo();
         break;
       case 4:
+        navigatorWidget = PassArgumentToRoute();
+        break;
+      case 5:
         navigatorWidget = SendDataToNewScreenDemo();
         break;
     }
