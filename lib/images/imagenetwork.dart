@@ -12,7 +12,7 @@ class ImageNetworkDemo extends StatelessWidget {
         title: Text(title),
       ),
       body: Image.network(
-        'https://github.com/flutter/website/blob/master/src/_includes/code/layout/lakes/images/lake.jpg?raw=true',
+        'https://picsum.photos/250?image=9',
       ),
     );
   }

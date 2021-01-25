@@ -9,21 +9,20 @@ class FadeInWithPlaceHolderDemo extends StatelessWidget {
     final title = 'Fade in images';
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text(title),
-        ),
-        body: Stack(
-          children: <Widget>[
-            Center(child: CircularProgressIndicator()),
-            Center(
-              child: FadeInImage.memoryNetwork(
-                placeholder: kTransparentImage,
-                image:
-                    'https://github.com/flutter/website/blob/master/src/_includes/code/layout/lakes/images/lake.jpg?raw=true',
-              ),
-            )
-          ],
-        ),
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Stack(
+        children: <Widget>[
+          Center(child: CircularProgressIndicator()),
+          Center(
+            child: FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage,
+              image: 'https://picsum.photos/250?image=9',
+            ),
+          )
+        ],
+      ),
     );
   }
 }
