@@ -1,7 +1,7 @@
 import 'package:cookbook/animation/main_animation.dart';
 import 'package:flutter/material.dart';
 
-import 'design/maindesign.dart';
+import 'design/main_design.dart';
 import 'forms/mainforms.dart';
 import 'gestures/maingestures.dart';
 import 'images/mainimages.dart';

@@ -1,10 +1,12 @@
+import 'package:cookbook/design/use_custom_font.dart';
 import 'package:flutter/material.dart';
-import 'adddrawer.dart';
-import 'displayingsnackbar.dart';
-import 'updateorientation.dart';
-import 'customtheme.dart';
-import 'tabbar.dart';
+
 import '../simplelist.dart';
+import 'adddrawer.dart';
+import 'customtheme.dart';
+import 'displayingsnackbar.dart';
+import 'tabbar.dart';
+import 'updateorientation.dart';
 
 void main() => runApp(MainDesignMenu());
 
@@ -13,6 +15,7 @@ class MainDesignMenu extends StatelessWidget {
     'Add a Drawer to a screen',
     'Displaying Snackbars',
     'Updating the UI based on orientation',
+    'Use a custom font',
     'Using Themes to share colors and font styles',
     'Working with Tabs',
   ];
@@ -31,9 +34,12 @@ class MainDesignMenu extends StatelessWidget {
         navigatorWidget = OreintationDemo();
         break;
       case 3:
-        navigatorWidget = CustomThemeDemo();
+        navigatorWidget = UseCustomFont();
         break;
       case 4:
+        navigatorWidget = CustomThemeDemo();
+        break;
+      case 5:
         navigatorWidget = TabBarDemo();
         break;
     }
