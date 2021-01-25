@@ -1,8 +1,12 @@
-import 'package:flutter/material.dart';
+import 'package:cookbook/networking/delete_on_server.dart';
+import 'package:cookbook/networking/send_data.dart';
+import 'package:cookbook/networking/update_data.dart';
 import 'package:cookbook/simplelist.dart';
-import 'simple_fetch.dart';
+import 'package:flutter/material.dart';
+
 import 'authenticated_requests.dart';
 import 'parsing_in_background.dart';
+import 'simple_fetch.dart';
 import 'websocket_page.dart';
 
 class MainNetworkingMenu extends StatelessWidget {
@@ -11,6 +15,9 @@ class MainNetworkingMenu extends StatelessWidget {
     'Making authenticated requests',
     'Parsing JSON in the background',
     'Working with WebSockets',
+    'Delete data on the internet',
+    'Send data on the internet',
+    'Update data over the internet',
   ];
   final title = "Networking";
 
@@ -28,6 +35,15 @@ class MainNetworkingMenu extends StatelessWidget {
         break;
       case 3:
         navigatorWidget = WebSocketDemo();
+        break;
+      case 4:
+        navigatorWidget = DeleteOnServerDemo();
+        break;
+      case 5:
+        navigatorWidget = SendDataDemo();
+        break;
+      case 6:
+        navigatorWidget = UpdateDataDemo();
         break;
     }
     if (navigatorWidget != null) {
