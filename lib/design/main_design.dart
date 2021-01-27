@@ -2,11 +2,11 @@ import 'package:cookbook/design/use_custom_font.dart';
 import 'package:flutter/material.dart';
 
 import '../simplelist.dart';
-import 'adddrawer.dart';
-import 'customtheme.dart';
-import 'displayingsnackbar.dart';
-import 'tabbar.dart';
-import 'updateorientation.dart';
+import 'add_drawer.dart';
+import 'custom_theme.dart';
+import 'displaying_snackbar.dart';
+import 'tab_bar.dart';
+import 'update_orientation.dart';
 
 void main() => runApp(MainDesignMenu());
 

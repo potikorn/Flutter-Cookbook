@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'formvalidate.dart';
-import 'styletextfield.dart';
-import 'focustextfield.dart';
-import 'handletextchange.dart';
-import 'retrievevalue.dart';
+import 'form_validate.dart';
+import 'style_text_field.dart';
+import 'focus_text_field.dart';
+import 'handle_text_change.dart';
+import 'retrieve_value.dart';
 import '../simplelist.dart';
 
 void main() => runApp(MainFormMenu());

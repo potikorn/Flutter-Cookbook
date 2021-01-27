@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cookbook/simplelist.dart';
-import 'materialtouchripple.dart';
-import 'handletaps.dart';
-import 'swipetodismiss.dart';
+import 'material_touch_ripple.dart';
+import 'handle_taps.dart';
+import 'swipe_to_dismiss.dart';
 
 void main() => runApp(MainGesturesMenu());
 

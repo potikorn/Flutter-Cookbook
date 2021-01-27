@@ -2,12 +2,12 @@ import 'package:cookbook/animation/main_animation.dart';
 import 'package:flutter/material.dart';
 
 import 'design/main_design.dart';
-import 'forms/mainforms.dart';
-import 'gestures/maingestures.dart';
-import 'images/mainimages.dart';
-import 'listdemo/mainlist.dart';
+import 'forms/main_forms.dart';
+import 'gestures/main_gestures.dart';
+import 'images/main_images.dart';
+import 'listdemo/main_list.dart';
 import 'model/menu_model.dart';
-import 'navigation/mainnavigation.dart';
+import 'navigation/main_navigation.dart';
 import 'networking/main_networking.dart';
 import 'persistence/main_persistence.dart';
 

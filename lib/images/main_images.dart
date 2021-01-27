@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cookbook/simplelist.dart';
-import 'imagenetwork.dart';
-import 'fadeinimage.dart';
-import 'cachedimage.dart';
+import 'image_network.dart';
+import 'fade_in_image.dart';
+import 'cached_image.dart';
 
 void main() => runApp(MainImagesMenu());
 
