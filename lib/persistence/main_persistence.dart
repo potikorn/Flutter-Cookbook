@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:cookbook/persistence/sqlite_demo.dart';
 import 'package:cookbook/simplelist.dart';
+import 'package:flutter/material.dart';
+
 import 'read_and_write_file.dart';
 import 'store_data_on_disk.dart';
 
@@ -7,6 +9,7 @@ class MainPersistenceMenu extends StatelessWidget {
   final _simpleMenu = [
     'Reading and Writing Files',
     'Storing key-value data on disk',
+    'SQLite demo',
   ];
   final title = "Networking";
 
@@ -18,6 +21,9 @@ class MainPersistenceMenu extends StatelessWidget {
         break;
       case 1:
         navigatorWidget = StoreDataOnDiskDemo();
+        break;
+      case 2:
+        navigatorWidget = SQLiteDemo();
         break;
     }
     if (navigatorWidget != null) {
@@ -36,4 +42,3 @@ class MainPersistenceMenu extends StatelessWidget {
     );
   }
 }
-
