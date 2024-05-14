@@ -14,7 +14,7 @@ class CachedImageDemo extends StatelessWidget {
         child: CachedNetworkImage(
           placeholder: (context, url) => const CircularProgressIndicator(),
           imageUrl:
-              'https://github.com/flutter/website/blob/master/src/_includes/code/layout/lakes/images/lake.jpg?raw=true',
+              'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
         ),
       ),
     );

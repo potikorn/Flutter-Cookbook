@@ -8,7 +8,7 @@ class ImageNetworkDemo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Web Images")),
       body: Image.network(
-        'https://github.com/flutter/website/blob/master/src/_includes/code/layout/lakes/images/lake.jpg?raw=true',
+        'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif',
       ),
     );
   }
