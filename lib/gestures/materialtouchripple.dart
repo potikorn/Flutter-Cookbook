@@ -13,7 +13,9 @@ class MaterialTouchRipple extends StatelessWidget {
 class _MyHomePage extends StatelessWidget {
   final String title;
 
-  _MyHomePage({Key key, this.title}) : super(key: key);
+  _MyHomePage({
+    this.title = "",
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +33,9 @@ class _MyButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Scaffold.of(context).showSnackBar(SnackBar(
-          content: Text('tap'),
-        ));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('tap')),
+        );
       },
       child: Container(
         padding: EdgeInsets.all(12.0),

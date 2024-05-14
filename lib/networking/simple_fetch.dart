@@ -7,8 +7,9 @@ import 'package:http/http.dart' as http;
 import '../model/post_model.dart';
 
 Future<Post> fetchPost() async {
-  final response =
-      await http.get('https://jsonplaceholder.typicode.com/posts/1');
+  final response = await http.get(
+    Uri.parse('https://jsonplaceholder.typicode.com/posts/1'),
+  );
   print(response);
   if (response.statusCode == 200) {
     // If the call to the server was successful, parse the JSON
@@ -33,7 +34,7 @@ class FetchDataFromNetworkDemo extends StatelessWidget {
           future: post,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return Text(snapshot.data.title);
+              return Text(snapshot.data?.title ?? "");
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
             }

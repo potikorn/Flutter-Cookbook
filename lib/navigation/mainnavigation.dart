@@ -17,7 +17,7 @@ class MainNavigationMenu extends StatelessWidget {
   final title = "Navigation";
 
   void onTapMenu(BuildContext context, int index) {
-    Widget navigatorWidget;
+    Widget? navigatorWidget;
     switch (index) {
       case 0:
         navigatorWidget = AnimateNavigationDemo();
@@ -37,7 +37,9 @@ class MainNavigationMenu extends StatelessWidget {
     }
     if (navigatorWidget != null) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => navigatorWidget));
+        context,
+        MaterialPageRoute(builder: (context) => navigatorWidget!),
+      );
     }
   }
 

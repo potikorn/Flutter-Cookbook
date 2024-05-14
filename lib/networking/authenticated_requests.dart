@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 
 Future<http.Response> fetchPost() async {
   final response = await http.get(
-    'https://jsonplaceholder.typicode.com/posts/1',
+    Uri.parse('https://jsonplaceholder.typicode.com/posts/1'),
     // add headers here
     headers: {HttpHeaders.authorizationHeader: "Basic your_api_token_here"},
   );
@@ -27,7 +27,7 @@ class AuthenticatedRequestsDemo extends StatelessWidget {
           future: post,
           builder: (context, snapshot) {
             if (snapshot.hasData) {
-              return Text(snapshot.data.headers.toString());
+              return Text(snapshot.data?.headers.toString() ?? "");
             } else if (snapshot.hasError) {
               return Text("${snapshot.error}");
             }

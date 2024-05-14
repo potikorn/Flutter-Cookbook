@@ -21,12 +21,14 @@ class SelectionButton extends StatelessWidget {
       MaterialPageRoute(builder: (context) => SelectionScreen()),
     );
     if (result != null)
-      Scaffold.of(context).showSnackBar(SnackBar(content: Text('$result')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('$result')),
+      );
   }
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton(
       onPressed: () {
         _navigateAndDisplaySelection(context);
       },
@@ -48,7 +50,7 @@ class SelectionScreen extends StatelessWidget {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () {
                   // Our Yep button will return "Yep!" as the result
                   Navigator.pop(context, 'Yep!');
@@ -58,7 +60,7 @@ class SelectionScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () {
                   // Our Nope button will return "Nope!" as the result
                   Navigator.pop(context, 'Nope!');

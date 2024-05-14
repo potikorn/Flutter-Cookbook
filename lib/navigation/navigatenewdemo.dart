@@ -8,7 +8,7 @@ class NavigateDemo extends StatelessWidget {
         title: Text('First Screen'),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('Launch screen'),
           onPressed: () {
             Navigator.push(
@@ -30,7 +30,7 @@ class SecondScreen extends StatelessWidget {
         title: Text("Second Screen"),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: () {
             Navigator.pop(context);
           },

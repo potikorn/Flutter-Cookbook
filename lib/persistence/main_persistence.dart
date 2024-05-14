@@ -11,7 +11,7 @@ class MainPersistenceMenu extends StatelessWidget {
   final title = "Networking";
 
   void onTapMenu(BuildContext context, int index) {
-    Widget navigatorWidget;
+    Widget? navigatorWidget;
     switch (index) {
       case 0:
         navigatorWidget = ReadAndWriteFileDemo();
@@ -22,7 +22,9 @@ class MainPersistenceMenu extends StatelessWidget {
     }
     if (navigatorWidget != null) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => navigatorWidget));
+        context,
+        MaterialPageRoute(builder: (context) => navigatorWidget!),
+      );
     }
   }
 
@@ -36,4 +38,3 @@ class MainPersistenceMenu extends StatelessWidget {
     );
   }
 }
-

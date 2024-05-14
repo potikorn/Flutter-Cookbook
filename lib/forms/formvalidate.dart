@@ -7,10 +7,10 @@ class ValidateFormDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     final appTitle = 'Form Validation Demo';
     return Scaffold(
-        appBar: AppBar(
-          title: Text(appTitle),
-        ),
-        body: CustomForm(),
+      appBar: AppBar(
+        title: Text(appTitle),
+      ),
+      body: CustomForm(),
     );
   }
 }
@@ -34,18 +34,20 @@ class _CustomFormState extends State<CustomForm> {
         children: <Widget>[
           TextFormField(
             validator: (value) {
-              if (value.isEmpty) {
+              if (value?.isEmpty ?? false) {
                 return 'Please enter some text';
               }
+              return null;
             },
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
-            child: RaisedButton(
+            child: ElevatedButton(
               onPressed: () {
-                if (_formKey.currentState.validate()) {
-                  Scaffold.of(context)
-                      .showSnackBar(SnackBar(content: Text('Processing Data')));
+                if (_formKey.currentState?.validate() ?? false) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Processing Data')),
+                  );
                 }
               },
               child: Text('Submit'),

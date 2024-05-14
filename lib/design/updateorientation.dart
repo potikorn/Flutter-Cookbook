@@ -15,7 +15,7 @@ class OreintationDemo extends StatelessWidget {
 
 class OrientationList extends StatelessWidget {
   final title;
-  OrientationList({Key key, this.title}) : super(key: key);
+  OrientationList({super.key, this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class OrientationList extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Try rotate your device!',
-                  style: Theme.of(context).textTheme.display1,
+                  style: Theme.of(context).textTheme.displayLarge,
                 ),
               ],
             ),
@@ -40,7 +40,7 @@ class OrientationList extends StatelessWidget {
                     return Center(
                       child: Text(
                         'Item $index',
-                        style: Theme.of(context).textTheme.headline,
+                        style: Theme.of(context).textTheme.headlineMedium,
                       ),
                     );
                   }),

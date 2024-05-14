@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(SwipeToDismissDemo());
 
 class SwipeToDismissDemo extends StatefulWidget {
-  SwipeToDismissDemo({Key key}) : super(key: key);
+  SwipeToDismissDemo({super.key});
 
   @override
   SwipeToDismissDemoState createState() {
@@ -29,8 +29,9 @@ class SwipeToDismissDemoState extends State<SwipeToDismissDemo> {
               setState(() {
                 items.removeAt(index);
               });
-              Scaffold.of(context)
-                  .showSnackBar(SnackBar(content: Text("$item dismissed")));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text("$item dismissed")),
+              );
             },
             background: Container(color: Colors.red),
             child: ListTile(title: Text('$item')),

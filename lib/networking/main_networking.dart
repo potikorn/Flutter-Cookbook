@@ -15,7 +15,7 @@ class MainNetworkingMenu extends StatelessWidget {
   final title = "Networking";
 
   void onTapMenu(BuildContext context, int index) {
-    Widget navigatorWidget;
+    Widget? navigatorWidget;
     switch (index) {
       case 0:
         navigatorWidget = FetchDataFromNetworkDemo();
@@ -32,7 +32,9 @@ class MainNetworkingMenu extends StatelessWidget {
     }
     if (navigatorWidget != null) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => navigatorWidget));
+        context,
+        MaterialPageRoute(builder: (context) => navigatorWidget!),
+      );
     }
   }
 

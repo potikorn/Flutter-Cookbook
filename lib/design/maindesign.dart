@@ -19,7 +19,7 @@ class MainDesignMenu extends StatelessWidget {
   final title = "Design";
 
   void onTapMenu(BuildContext context, int index) {
-    Widget navigatorWidget;
+    Widget? navigatorWidget;
     switch (index) {
       case 0:
         navigatorWidget = AddDrawer();
@@ -39,7 +39,7 @@ class MainDesignMenu extends StatelessWidget {
     }
     if (navigatorWidget != null) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => navigatorWidget));
+          context, MaterialPageRoute(builder: (context) => navigatorWidget!));
     }
   }
 

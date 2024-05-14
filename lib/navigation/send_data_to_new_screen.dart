@@ -4,9 +4,9 @@ class SendDataToNewScreenDemo extends StatelessWidget {
   final todos = List<Todo>.generate(
     20,
     (i) => Todo(
-          'Todo $i',
-          'A Description of what needs to be done for Todo $i',
-        ),
+      'Todo $i',
+      'A Description of what needs to be done for Todo $i',
+    ),
   );
 
   @override
@@ -41,7 +41,10 @@ class SendDataToNewScreenDemo extends StatelessWidget {
 class DetailScreen extends StatelessWidget {
   final Todo todo;
 
-  DetailScreen({Key key, @required this.todo}) : super(key: key);
+  DetailScreen({
+    super.key,
+    required this.todo,
+  });
 
   @override
   Widget build(BuildContext context) {

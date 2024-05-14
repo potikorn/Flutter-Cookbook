@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,7 +7,7 @@ void main() {
 class LongListDemo extends StatelessWidget {
   final List<String> items = List<String>.generate(10000, (i) => "Item $i");
 
-  LongListDemo({Key key}) : super(key: key);
+  LongListDemo({super.key});
 
   @override
   Widget build(BuildContext context) {

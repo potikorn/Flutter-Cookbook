@@ -34,7 +34,7 @@ class MainMenuState extends State<MainMenu> {
   ];
 
   void onMenuTab(int index, BuildContext context) {
-    Widget navigateWidget;
+    Widget? navigateWidget;
     switch (index) {
       case 0:
         navigateWidget = FadeInFadeOutAnimation();
@@ -66,7 +66,7 @@ class MainMenuState extends State<MainMenu> {
     }
     if (navigateWidget != null) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => navigateWidget));
+          context, MaterialPageRoute(builder: (context) => navigateWidget!));
     }
   }
 
@@ -74,6 +74,7 @@ class MainMenuState extends State<MainMenu> {
   Widget build(BuildContext context) {
     final title = 'Flutter Cook Book';
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: title,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -120,8 +121,8 @@ class MainMenuState extends State<MainMenu> {
                 menuModel.menuName,
                 style: Theme.of(context)
                     .textTheme
-                    .title
-                    .copyWith(color: Colors.white),
+                    .titleMedium
+                    ?.copyWith(color: Colors.white),
               ),
             )
           ],

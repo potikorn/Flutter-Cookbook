@@ -40,7 +40,7 @@ class __MyCustomFromState extends State<_MyCustomFrom> {
         // When the user presses the button, show an alert dialog with the
         // text the user has typed into our text field.
         onPressed: () {
-          return showDialog(
+          showDialog(
             context: context,
             builder: (context) {
               return AlertDialog(
@@ -50,6 +50,7 @@ class __MyCustomFromState extends State<_MyCustomFrom> {
               );
             },
           );
+          return;
         },
         tooltip: 'Show me the value!',
         child: Icon(Icons.text_fields),

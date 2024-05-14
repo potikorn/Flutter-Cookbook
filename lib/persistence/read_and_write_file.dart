@@ -10,7 +10,7 @@ class ReadAndWriteFileDemo extends StatefulWidget {
 }
 
 class _ReadAndWriteFileDemoState extends State<ReadAndWriteFileDemo> {
-  int _counter;
+  int _counter = 0;
 
   @override
   void initState() {

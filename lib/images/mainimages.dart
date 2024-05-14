@@ -15,7 +15,7 @@ class MainImagesMenu extends StatelessWidget {
   final title = "Images";
 
   void onTapMenu(BuildContext context, int index) {
-    Widget navigatorWidget;
+    Widget? navigatorWidget;
     switch (index) {
       case 0:
         navigatorWidget = ImageNetworkDemo();
@@ -29,7 +29,9 @@ class MainImagesMenu extends StatelessWidget {
     }
     if (navigatorWidget != null) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => navigatorWidget));
+        context,
+        MaterialPageRoute(builder: (context) => navigatorWidget!),
+      );
     }
   }
 

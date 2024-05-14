@@ -16,7 +16,7 @@ class MainGesturesMenu extends StatelessWidget {
 
   void onTapMenu(BuildContext context, int index) {
     print(index);
-    Widget navigatorWidget;
+    Widget? navigatorWidget;
     switch (index) {
       case 0:
         navigatorWidget = MaterialTouchRipple();
@@ -30,7 +30,9 @@ class MainGesturesMenu extends StatelessWidget {
     }
     if (navigatorWidget != null) {
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => navigatorWidget));
+        context,
+        MaterialPageRoute(builder: (context) => navigatorWidget!),
+      );
     }
   }
 

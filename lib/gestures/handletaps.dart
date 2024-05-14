@@ -14,7 +14,9 @@ class HandleTapsDemo extends StatelessWidget {
 class _MyHomePage extends StatelessWidget {
   final String title;
 
-  _MyHomePage({Key key, this.title}) : super(key: key);
+  _MyHomePage({
+    this.title = "",
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,12 +33,12 @@ class _MyButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         final snackBar = SnackBar(content: Text("Tap"));
-        Scaffold.of(context).showSnackBar(snackBar);
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
       },
       child: Container(
         padding: EdgeInsets.all(12.0),
         decoration: BoxDecoration(
-          color: Theme.of(context).buttonColor,
+          color: Theme.of(context).buttonTheme.colorScheme?.primary,
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Text('My Button'),

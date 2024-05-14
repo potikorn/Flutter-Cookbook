@@ -15,7 +15,7 @@ class _MyCustomForm extends StatefulWidget {
 }
 
 class __MyCustomFormState extends State<_MyCustomForm> {
-  FocusNode myFocusNode;
+  FocusNode? myFocusNode;
 
   @override
   void initState() {
@@ -25,8 +25,8 @@ class __MyCustomFormState extends State<_MyCustomForm> {
 
   @override
   void dispose() {
-    myFocusNode.dispose();
-    
+    myFocusNode?.dispose();
+
     super.dispose();
   }
 

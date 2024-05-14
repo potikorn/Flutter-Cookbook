@@ -6,8 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 Future<List<Photo>> fetchPhotos(http.Client client) async {
-  final response =
-      await client.get('https://jsonplaceholder.typicode.com/photos');
+  final response = await client.get(
+    Uri.parse('https://jsonplaceholder.typicode.com/photos'),
+  );
 
   // Use the compute function to run parsePhotos in a separate isolate
   return compute(parsePhotos, response.body);
@@ -21,11 +22,15 @@ List<Photo> parsePhotos(String responseBody) {
 }
 
 class Photo {
-  final int id;
-  final String title;
-  final String thumbnailUrl;
+  final int? id;
+  final String? title;
+  final String? thumbnailUrl;
 
-  Photo({this.id, this.title, this.thumbnailUrl});
+  Photo({
+    this.id,
+    this.title,
+    this.thumbnailUrl,
+  });
 
   factory Photo.fromJson(Map<String, dynamic> json) {
     return Photo(
@@ -39,7 +44,7 @@ class Photo {
 class ParsingInBackgroundDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text('Isolate Demo'),
       ),
@@ -49,7 +54,7 @@ class ParsingInBackgroundDemo extends StatelessWidget {
           if (snapshot.hasError) print(snapshot.error);
 
           return snapshot.hasData
-              ? PhotosList(photos: snapshot.data)
+              ? PhotosList(photos: snapshot.data!)
               : Center(child: CircularProgressIndicator());
         },
       ),
@@ -58,9 +63,9 @@ class ParsingInBackgroundDemo extends StatelessWidget {
 }
 
 class PhotosList extends StatelessWidget {
-  final List<Photo> photos;
+  final List<Photo>? photos;
 
-  PhotosList({Key key, this.photos}) : super(key: key);
+  PhotosList({super.key, this.photos});
 
   @override
   Widget build(BuildContext context) {
@@ -68,9 +73,9 @@ class PhotosList extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
       ),
-      itemCount: photos.length,
+      itemCount: photos?.length,
       itemBuilder: (context, index) {
-        return Image.network(photos[index].thumbnailUrl);
+        return Image.network(photos?[index].thumbnailUrl ?? "");
       },
     );
   }

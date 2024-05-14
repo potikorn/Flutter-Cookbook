@@ -54,9 +54,9 @@ class _StoreDataOnDiskDemoState extends State<StoreDataOnDiskDemo> {
             Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: _clearData,
               child: Text('Clear Data'),
             )
